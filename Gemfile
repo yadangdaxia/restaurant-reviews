@@ -23,7 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'simple_form'
-# Note: I Added this myself -AM
+gem 'faker'
+# Note: I Added these myself. Need to run bundle install after updating this file -AM
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

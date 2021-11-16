@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Cleaning up database."
+Restaurant.destroy_all
+puts "Database is clean. Start seeding."
+
+
+# Faker file from here: https://github.com/faker-ruby/faker
+10.times do
+    restaurant = Restaurant.create(
+        name: Faker::Restaurant.name,
+        address: Faker::Address.full_address,
+        rating: rand(1..5)
+    )
+    puts "Restaurant #{restaurant.id} is created."
+end
+puts "Done seeding."
